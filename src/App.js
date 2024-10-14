@@ -53,14 +53,19 @@ function App() {
   }, [handleKeyPress]);
 
   return (
-    <div id="drum-machine">
-      <div id="display">{display}</div>
-      <div id="drum-pads">
-        {sounds.map((sound) => (
-          <DrumPad key={sound.id} keyTrigger={sound.key} id={sound.id} url={sound.url} playSound={playSound} />
-        ))}
+    <>
+      <h1>Sedighe Ghanbary</h1>
+      <h2> sedighe.ghanbary@gmail.com</h2>
+      <h2>https://www.linkedin.com/in/sedighe-ghanbari/</h2>
+      <div id="drum-machine">
+        <div id="display">{display}</div>
+        <div id="drum-pads">
+          {sounds?.map((sound) => (
+            <DrumPad key={sound.id} keyTrigger={sound.key} id={sound.id} url={sound.url} playSound={playSound} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
